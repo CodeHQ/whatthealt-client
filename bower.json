@@ -1,33 +1,33 @@
 {
-    "name": "whatthealt-client",
-    "version": "0.1.0",
-    "main": ["dist/whatthealt.js", "dist/whatthealt.min.js"],
-    "ignore": [
-        "src",
-        "spec",
-        ".bowerrc",
-        ".gitignore",
-        ".jshintignore",
-        ".jshintrc",
-        "bower.json",
-        "gruntfile.js",
-        "package.json",
-        "README.md"
-    ],
-    "moduleType": [
-        "amd",
-        "globals",
-        "node"
-    ],
-    "keywords": [
-        "whatthealt"
-    ],
-    "authors": [
-        "Craig Pretorius <craigp@codehq.co.za>"
-    ],
-    "license": "MIT",
-    "dependencies": {
-        "jquery": ">=1.10.2",
-        "Lock-Stock-and-Auth-client": "~0.1.0"
-    }
+  "name": "whatthealt-client",
+  "version": "0.1.0",
+  "main": [ "dist/whatthealt.js", "dist/whatthealt.min.js" ],
+  "ignore": [
+    "src",
+    "spec",
+    ".bowerrc",
+    ".gitignore",
+    ".jshintignore",
+    ".jshintrc",
+    "bower.json",
+    "gruntfile.js",
+    "package.json",
+    "demo"
+  ],
+  "moduleType": [
+    "amd",
+    "globals",
+    "node"
+  ],
+  "keywords": [
+    "whatthealt"
+  ],
+  "authors": [
+    "Craig Pretorius <craigp@codehq.co.za>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jquery": ">=1.10.2",
+    "Lock-Stock-and-Auth-client": "~0.1.0"
+  }
 }

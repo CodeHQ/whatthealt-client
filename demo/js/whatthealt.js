@@ -1,6 +1,5 @@
 ﻿;
-(function(root, factory) {
-
+(function (root, factory) {
     if (typeof define === "function" && define.amd) {
         define(["jquery"], factory);
     } else if (typeof exports === "object") {
@@ -10,7 +9,7 @@
     }
 
 }(this,
-    function(jquery) {
+    function (jquery) {
         if (jquery === undefined) {
             alert("whatthealt requires jQuery");
         }
@@ -32,10 +31,7 @@
                     }
                 });
             }
-    }
-
-
-
+        }
         return whatthealt;
 
     }));

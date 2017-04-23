@@ -16,6 +16,7 @@
   ],
   "dependencies": {
     "Lock-Stock-and-Auth-client": "~0.1.0",
-    "bootstrap": "~3.3.7"
+    "bootstrap": "~3.3.7",
+    "whatthealt-client": "*"
   }
 }
