@@ -20,6 +20,7 @@
         copy: {
             main: {
                 files: [
+                    { expand: true, flatten: true, src: ['src/*'], dest: 'dist/', filter: 'isFile' },
                     { expand: true, flatten: true, src: ['src/*'], dest: 'demo/js/', filter: 'isFile' },
                     { expand: true, flatten: true, src: ['dist/*'], dest: 'demo/js/', filter: 'isFile' }
                 ],
