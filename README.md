@@ -56,3 +56,39 @@ whatthealt.get(imgUrls,
                 console.log(results);
             });
 ```
+The returning object has an array based on the max candidates called: "captions", this contains the alt tag descriptions that can be used.
+Here's an example:
+```javascript
+[
+ {
+    "id": "9eafd81d-12bf-40be-b601-869fb5e5a24d",
+    "imageUrl": "https://imageofacat.jpg",
+    "captions": [
+      {
+        "confidence": 0.70503248542144381,
+        "text": "a close up of a cat"
+      }
+    ],
+    "tags": [
+      "cat",
+      "animal",
+      "mammal",
+      "sitting",
+      "indoor",
+      "small",
+      "top",
+      "blue",
+      "white",
+      "looking",
+      "brown",
+      "laying",
+      "face",
+      "table",
+      "green",
+      "close",
+      "little",
+      "yellow"
+    ]
+  }
+]
+```
