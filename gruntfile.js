@@ -7,8 +7,14 @@
                 compress: {
                     drop_console: true
                 },
-                banner: "/*! <%= pkg.name %> - v<%= pkg.version %> - " +
-                    '<%= grunt.template.today("yyyy-mm-dd") %> */'
+                banner: "/*! What the alt client - v<%= pkg.version %> - " +
+                '<%= grunt.template.today("yyyy-mm-dd") %> */' + 
+                '/*! \n' + 
+                ' * http://whatthealt.com \n' +
+                ' * Copyright 2017 What the alt Authors \n' +
+                ' * Copyright 2017 Code HQ (Pty) (Ltd) \n' +
+                ' Licensed under MIT (https://github.com/CodeHQ/whatthealt-client/blob/master/LICENSE) \n' +
+                ' */'
             },
             target: {
                 files: [{
@@ -20,9 +26,7 @@
         copy: {
             main: {
                 files: [
-                    { expand: true, flatten: true, src: ['src/*'], dest: 'dist/', filter: 'isFile' },
-                    { expand: true, flatten: true, src: ['src/*'], dest: 'demo/js/', filter: 'isFile' },
-                    { expand: true, flatten: true, src: ['dist/*'], dest: 'demo/js/', filter: 'isFile' }
+                    { expand: true, flatten: true, src: ['src/*'], dest: 'dist/', filter: 'isFile' }
                 ],
             },
         }

@@ -10,7 +10,6 @@
   "license": "MIT",
   "dependencies": {
     "grunt": "^1.0.1",
-    "grunt-bowercopy": "^1.2.4",
-    "grunt-contrib-uglify": "^2.3.0"
+    "grunt-bowercopy": "^1.2.4"
   }
 }
