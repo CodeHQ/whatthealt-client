@@ -12,7 +12,8 @@
     "bower.json",
     "gruntfile.js",
     "package.json",
-    "demo"
+    "demo",
+    ".sln"
   ],
   "moduleType": [
     "amd",
