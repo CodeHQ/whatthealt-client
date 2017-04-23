@@ -13,7 +13,7 @@
     "gruntfile.js",
     "package.json",
     "demo",
-    ".sln"
+    "demo.sln"
   ],
   "moduleType": [
     "amd",
