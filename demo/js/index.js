@@ -4,7 +4,6 @@ aspnetAuth.url = "http://www.whatthealt.com";
 if (aspnetAuth.authentication) {
     // user is logged on
     $('#rowLogin').hide();
-    $('#rowLogout').show();
     $('#rowQuery').show();
 }
 
@@ -17,6 +16,7 @@ $('#formLogin').on('submit',
             password,
             function(result) {
                 $('#rowLogin').hide();
+                $('#rowQuery').show();
                 alert(result.message);
             });
     });
@@ -28,20 +28,22 @@ $('#formQuery').on('submit',
         var imgUrls = [
             $("#formQuery input[name=imgUrl]").val()
         ];
-        var numberOfCaptions = 1;
+        var maxCandidates = 1;
         whatthealt.get(imgUrls,
-            numberOfCaptions,
-            function(results) {
+            maxCandidates,
+            function (results) {
                 console.log(results);
-                results.forEach(function(result) {
+                results.forEach(function (result) {
+                    var imgUrl = result.imageUrl;
+                    var caption = result.captions[0].text;
                     var $row = $("<div>").addClass("row").append(
                         $("<div>").addClass("col-lg-6").append(
                             $("<div>").addClass("thumbnail").append(
-                                $("<img>").attr("src", result.imageUrl)
-                                .attr("alt", result.description.captions[0].text))
+                                $("<img>").attr("src", imgUrl)
+                                .attr("alt", caption))
                             .append(
                                 $("<div>").addClass("caption").append(
-                                    $("<p>").html(result.description.captions[0].text)))));
+                                    $("<p>").html(caption)))));
 
                     $("#intro .container").append($row);
                 });

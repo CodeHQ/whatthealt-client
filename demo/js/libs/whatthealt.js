@@ -28,8 +28,8 @@
                         'imgUrls': imgUrls,
                         'maxCandidates': maxCandidates
                     },
-                    headers: {
-                        'Authorization': "Bearer " + aspnetAuth.authentication.access_token
+                    beforeSend: function (request) {
+                        request.setRequestHeader("Authorization", "Bearer " + aspnetAuth.authentication.access_token);
                     },
                     dataType: "json",
                     success: function (serverData) {

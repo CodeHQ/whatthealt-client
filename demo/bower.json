@@ -5,7 +5,7 @@
     "Craig Pretorius <craigp@codehq.co.za>"
   ],
   "license": "MIT",
-  "homepage": "www.whatthealt.com",
+  "homepage": "http://www.whatthealt.com",
   "private": true,
   "ignore": [
     "**/.*",
@@ -17,6 +17,6 @@
   "dependencies": {
     "Lock-Stock-and-Auth-client": "~0.1.0",
     "bootstrap": "~3.3.7",
-    "whatthealt-client": "*"
+    "whatthealt": "*"
   }
 }

@@ -15,8 +15,8 @@
                     'jquery.min.map': "jquery/dist/jquery.min.map",
                     'bootstrap.min.js': "bootstrap/dist/js/bootstrap.min.js",
                     'aspnetAuth.min.js': "Lock-Stock-and-Auth-client/dist/aspnetAuth.min.js",
-                    'whatthealt.js': "whatthealt-client/dist/whatthealt.js",
-                    'whatthealt.min.js': "whatthealt-client/dist/whatthealt.min.js"
+                    'whatthealt.js': "whatthealt/dist/whatthealt.js",
+                    'whatthealt.min.js': "whatthealt/dist/whatthealt.min.js"
                 }
             },
             css: {
