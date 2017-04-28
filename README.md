@@ -48,9 +48,9 @@ Once the user is logged in, you can call the whatthealt get method to get the al
 * maxCandidates - number of descriptions for each image
 
 ```javascript
-var imgUrls = ["http://someimage.jpg"];
+var imgUrl = "https://imageofacat.jpg";
 var maxCandidates = 1;
-whatthealt.get(imgUrls,
+whatthealt.get(imgUrl,
             maxCandidates,
             function(results) {
                 console.log(results);
@@ -59,7 +59,6 @@ whatthealt.get(imgUrls,
 The returning object has an array based on the max candidates called: "captions", this contains the alt tag descriptions that can be used.
 Here's an example:
 ```javascript
-[
  {
     "id": "9eafd81d-12bf-40be-b601-869fb5e5a24d",
     "imageUrl": "https://imageofacat.jpg",
@@ -90,5 +89,4 @@ Here's an example:
       "yellow"
     ]
   }
-]
 ```

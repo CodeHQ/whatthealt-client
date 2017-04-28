@@ -20,16 +20,16 @@
             alert("whatthealt requires jQuery");
         }
         var whatthealt = {
-            get: function (imgUrls, maxCandidates, cb) {
+            get: function (imgUrl, maxCandidates, cb) {
                 $.ajax({
                     url: aspnetAuth.url + "/api/Captions",
                     type: "POST",
                     data: {
-                        'imgUrls': imgUrls,
+                        'imgUrl': imgUrl,
                         'maxCandidates': maxCandidates
                     },
-                    beforeSend: function (request) {
-                        request.setRequestHeader("Authorization", "Bearer " + aspnetAuth.authentication.access_token);
+                    headers: {
+                        'Authorization': "Bearer " + aspnetAuth.authentication.access_token
                     },
                     dataType: "json",
                     success: function (serverData) {

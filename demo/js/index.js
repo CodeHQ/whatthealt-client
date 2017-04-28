@@ -25,27 +25,23 @@ $('#formQuery').on('submit',
     function(e) {
         e.preventDefault();
         // add input text image url to array
-        var imgUrls = [
-            $("#formQuery input[name=imgUrl]").val()
-        ];
+        var imgUrl = $("#formQuery input[name=imgUrl]").val();
         var maxCandidates = 1;
-        whatthealt.get(imgUrls,
+        whatthealt.get(imgUrl,
             maxCandidates,
-            function (results) {
-                console.log(results);
-                results.forEach(function (result) {
-                    var imgUrl = result.imageUrl;
-                    var caption = result.captions[0].text;
-                    var $row = $("<div>").addClass("row").append(
-                        $("<div>").addClass("col-lg-6").append(
-                            $("<div>").addClass("thumbnail").append(
-                                $("<img>").attr("src", imgUrl)
+            function (result) {
+                console.log(result);
+                var imgUrl = result.imageUrl;
+                var caption = result.captions[0].text;
+                var $row = $("<div>").addClass("row").append(
+                    $("<div>").addClass("col-lg-6").append(
+                        $("<div>").addClass("thumbnail").append(
+                            $("<img>").attr("src", imgUrl)
                                 .attr("alt", caption))
                             .append(
-                                $("<div>").addClass("caption").append(
-                                    $("<p>").html(caption)))));
+                            $("<div>").addClass("caption").append(
+                                $("<p>").html(caption)))));
 
-                    $("#intro .container").append($row);
-                });
+                $("#intro .container").append($row);
             });
     });
